@@ -17,3 +17,5 @@ jobs:
   reusable:
     uses: ./.github/workflows/called.yaml
     secrets: inherit
+    with:
+      my-env-var: ${{ env.MY_ENV_VAR }}

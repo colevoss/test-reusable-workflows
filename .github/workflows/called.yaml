@@ -1,10 +1,17 @@
 name: Called
 
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      my-env-var:
+        required: true
+        type: string
 
 jobs:
   echo-from-caller:
     runs-on: ubuntu-latest
     steps:
+      - name: Set env var
+        run: echo "MY_ENV_VAR=${{inputs.my-env-var}}" >> $GITHUB_ENV
       - name: Echo
         run: echo $MY_ENV_VAR
