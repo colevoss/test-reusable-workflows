@@ -1,0 +1,15 @@
+name: Caller Workflow
+
+on: workflow_dispatch
+
+env:
+  MY_ENV_VAR: this-is-my-env-var
+
+jobs:
+  not-reusable:
+    name: Echoing MY_ENV_VAR From Caller
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo $MY_ENV_VAR
