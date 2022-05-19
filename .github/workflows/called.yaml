@@ -1,8 +1,6 @@
 name: Called
 
-on:
-  workflow_call:
-    secrets: inherit
+on: workflow_call
 
 jobs:
   echo-from-caller:

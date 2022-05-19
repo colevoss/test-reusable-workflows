@@ -16,3 +16,4 @@ jobs:
 
   reusable:
     uses: ./.github/workflows/called.yaml
+    secrets: inherit
