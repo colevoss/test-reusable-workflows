@@ -13,3 +13,6 @@ jobs:
       - name: Echo
         run: |
           echo $MY_ENV_VAR
+
+  reusable:
+    uses: ./.github/workflows/called.yaml

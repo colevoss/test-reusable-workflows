@@ -1,0 +1,12 @@
+name: Called
+
+on:
+  workflow_call:
+    secrets: inherit
+
+jobs:
+  echo-from-caller:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo $MY_ENV_VAR
